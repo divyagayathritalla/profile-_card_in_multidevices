@@ -1,0 +1,164 @@
+// $c1: rgb(152, 193, 152);
+// $c2: rgb(73, 73, 147);
+// $c2:#ffcc00;
+// $c3: rgb(171, 94, 106);
+// $c3: rgb(93, 93, 34);
+
+// $sm: 576px;
+// $md: 768px;
+// $lg: 992px;
+// $xl: 1200px;
+
+* {
+    padding: 0px;
+    margin: 0px 5px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+
+}
+
+.container {
+    height: 100vh;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 10%;
+    align-items: center;
+
+    & .headlogo {
+        font-size: 4vw;
+
+    }
+
+    & .headmenu {
+        font-size: 2.5;
+        display: flex;
+        gap: 15px;
+
+    }
+}
+
+.main {
+    height: 80%;
+    // border: 2px solid green;
+    display: flex;
+    flex-direction: row;
+
+    & .main-image {
+
+        // border: 3px solid rgb(5, 10, 10);
+        background-image: url('../profile_card_in_multiple_screens/profilepic-ai.jpg');
+        width: 50%;
+        height: 100%;
+        background-size: contain;
+        background-position: left center;
+        background-repeat: no-repeat;
+    }
+
+    &-content {
+        // border: 2px solid rgb(0, 0, 0);
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &-1 {
+            font-size: 10vw;
+        }
+
+        &-2,
+        &-3,
+        &-4 {
+            font-size: 5vw;
+        }
+    }
+}
+
+
+.footer {
+
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 20px;
+    margin-right: 5%;
+
+    & a {
+        text-decoration: none;
+        color: rgb(7, 7, 7);
+        width: 5vw;
+
+        font-size: 50px;
+
+    }
+
+    // border:1px solid blue;
+
+}
+
+
+
+
+
+@media (max-width:650px) {
+    .header {
+        justify-content: center;
+
+        & .headmenu {
+            display: none;
+        }
+
+        & .headlogo {
+            font-size: 40px;
+        }
+    }
+
+
+    .main {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        & .main-image {
+
+            width: 200px;
+            height: 200px;
+            border-radius:100% ;
+            background-size: 100%;
+            background-position: center;
+        }
+
+        &-content {
+            width: 100%;
+            &-1 {
+                // font-size: 8vw;
+                display: none;
+            }
+    
+            &-2,
+            &-3,
+            &-4 {
+                // font-size: 4vw;
+                font-size: 30px;
+            }
+        }
+    }
+
+    .footer{
+        margin:0px;
+        justify-content: center;
+        & a{
+          width:45px;
+          height: 45px; 
+        }
+    }
+}
